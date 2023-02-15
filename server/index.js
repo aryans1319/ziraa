@@ -12,6 +12,8 @@ const app = express();
 app.use(cors());
 connectDB();
 
+app.get('/hello', (_, res) => res.send('Hello from Aryan'))
+
 app.use(
   '/graphql',
   graphqlHTTP({
