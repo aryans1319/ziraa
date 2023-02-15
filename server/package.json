@@ -16,8 +16,8 @@
   "description": "Project Manager Tool",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
   },
   "author": "Aryan Shaw",
   "license": "ISC"
