@@ -16,6 +16,10 @@ code {
   color: #df3ca6;
 }
 
+.navbar-logo {
+  font-family: Century Gothic;
+}
+
 .navbar-brand img {
   width: 30px;
   margin-right: 10px;

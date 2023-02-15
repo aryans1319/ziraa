@@ -7,7 +7,7 @@ const Header = () => {
         <a className='navbar-brand' href='/'>
           <div className='d-flex'>
             <img src={logo} alt='logo' className='mr-2' />
-            <div>Ziraa</div>
+            <div className='navbar-logo'>ZIRAA</div>
           </div>
         </a>
       </div>
