@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Clients from "./components/Clients";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import ClientModal from "./components/modals/ClientModal";
 
 /*
 This is done to get rid of the warning: Cache Data may be lost when 
@@ -38,6 +39,7 @@ function App() {
       <ApolloProvider client={client}>
         <Header />
         <div className="container">
+          <ClientModal />
           <Clients />
         </div>
       </ApolloProvider>
