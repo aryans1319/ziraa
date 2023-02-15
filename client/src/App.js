@@ -1,8 +1,8 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Clients from "./components/Clients";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
-import ClientModal from "./components/modals/ClientModal";
-import Projects from "./components/Projects";
+import Home from "./pages/Home";
+import NotFoundContent from "./pages/NotFoundContent";
 
 /*
 This is done to get rid of the warning: Cache Data may be lost when 
@@ -38,12 +38,16 @@ function App() {
   return (
     <>
       <ApolloProvider client={client}>
+        <Router>
         <Header />
         <div className="container">
-          <ClientModal />
-          <Projects />
-          <Clients />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFoundContent />} />
+          </Routes>
         </div>
+        </Router>
+       
       </ApolloProvider>
     </>
   );
