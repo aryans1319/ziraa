@@ -5,14 +5,18 @@ const dotenv = require("dotenv");
 const schema = require("./schema/schema.js");
 const { graphqlHTTP } = require("express-graphql");
 const connectDB = require("./config/db.js");
-
+const path = require("path");
 dotenv.config();
 
 const app = express();
 app.use(cors());
 connectDB();
 
-app.get('/', (_, res) => res.send('Hello from Aryan'))
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 app.use(
   '/graphql',
