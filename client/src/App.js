@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import Home from "./pages/Home";
 import NotFoundContent from "./pages/NotFoundContent";
+import Project from "./pages/Project";
 
 /*
 This is done to get rid of the warning: Cache Data may be lost when 
@@ -43,6 +44,10 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route
+              path="/projects/:id"
+              element={<Project />}
+            />
             <Route path="*" element={<NotFoundContent />} />
           </Routes>
         </div>

@@ -7,7 +7,7 @@ import { GET_PROJECTS } from '../../queries/ProjectQueries';
 import { GET_CLIENTS } from '../../queries/ClientQueries';
 
 const ProjectModal = () => {
-    const [name, setName] = useState('');
+  const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [clientId, setClientId] = useState('');
   const [status, setStatus] = useState('new');
